@@ -1,0 +1,61 @@
+.payment-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://tse4.mm.bing.net/th/id/OIP.wz2eQ7KUE4ltiVW-4DcG6AHaEK?rs=1&pid=ImgDetMain");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Semi-transparent payment box */
+.payment-box {
+    width: 400px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2); /* More transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Glass effect */
+    color: white; /* Text color */
+}
+
+/* Input fields styling */
+.card-section {
+    margin-top: 15px;
+}
+
+input.form-control {
+    font-size: 16px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.3); /* Transparent input fields */
+    border: none;
+    color: white; /* Text color */
+}
+
+/* Placeholder text color */
+input.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Green "Pay & Book" button */
+.btn-success {
+    font-size: 18px;
+    padding: 10px;
+    background: rgba(0, 128, 0, 0.8);
+    border: none;
+    transition: 0.3s;
+}
+
+/* Hover effect on button */
+.btn-success:hover {
+    background: rgba(0, 128, 0, 1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment-box {
+        width: 90%;
+        padding: 20px;
+    }
+}

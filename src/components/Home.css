@@ -1,0 +1,98 @@
+/* Full-page background */
+.home-container {
+  position: relative;
+  height: 100vh;
+  background: url("https://th.bing.com/th/id/OIP.ueLDRcrpoqTL77E5KPVLvAHaE7?pid=ImgDet&w=184&h=122&c=7&dpr=1.3") no-repeat center center/cover;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Darken background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero-text {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Special Note (Blinking) */
+.special-note {
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: blinkText 1s infinite alternate;
+}
+
+@keyframes blinkText {
+  0% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* Bootstrap Card Styling */
+.concert-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.concert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(255, 165, 0, 0.3);
+}
+
+/* Cart Icon */
+.cart-icon {
+  font-size: 2.5rem;
+  color: #ff9800;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  margin-top: 10px;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+.cart-icon:hover {
+  transform: scale(1.2);
+  color: #ff5722;
+}
+
+/* Animations */
+.animate-fadeIn {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 1.2s ease-in-out;
+}
+
+.animate-zoomIn {
+  animation: zoomIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}

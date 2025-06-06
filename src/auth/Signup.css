@@ -1,0 +1,68 @@
+/* Background Styling */
+.signup-container {
+    width: 100%;
+    height: 100vh;
+    background: url("https://png.pngtree.com/thumb_back/fw800/background/20221021/pngtree-sign-up-network-create-account-page-photo-image_15082264.jpg") 
+        no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Signup Box Styling - Black Background with White Text */
+.signup-box {
+    width: 400px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.9); /* Black background */
+    color: white; /* White text */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Light shadow for contrast */
+}
+
+/* Input Fields - White Text on Dark Background */
+.form-control {
+    font-size: 16px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent */
+    border: 1px solid #fff;
+    color: white;
+}
+
+/* Placeholder Text - White */
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Focus Effect */
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Signup Button - White with Blue Hover */
+.btn-primary {
+    font-size: 18px;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Login Link */
+.login-link {
+    color: #00c3ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+}

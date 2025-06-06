@@ -1,0 +1,98 @@
+/* Overall Layout */
+.login-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Admin Section - Left Side */
+.admin-section {
+    flex: 1;
+    background: url("https://wallpaperbat.com/img/312976-free-download-log-on-to-your-bank-account-on-a-laptop-logging.png") 
+        no-repeat center center;
+    background-size: cover;
+}
+
+/* Login Form Section - Right Side */
+.login-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.85); /* Dark background */
+    color: white;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Fields */
+.form-control {
+    font-size: 16px;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    color: white;
+}
+
+/* Placeholder Text */
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Focus Effect */
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Login Button */
+.btn-primary {
+    font-size: 18px;
+    padding: 12px;
+    width: 100%;
+}
+
+/* Signup Link */
+.signup-link {
+    color: #00c3ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/* Switch Button */
+.switch-btn {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    color: #00c3ff;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.switch-btn:hover {
+    color: #007bff;
+}
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .login-logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .login-logo:hover {
+    transform: scale(1.1);
+  }
+  

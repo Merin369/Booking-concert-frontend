@@ -1,0 +1,71 @@
+/* Dashboard Container */
+.dashboard-container {
+    padding-top: 30px;
+}
+
+/* Card Styling - Black Background */
+.card {
+    border-radius: 10px;
+    background-color: #000; /* Black background */
+    color: white; /* White text */
+    padding: 20px;
+}
+
+/* Form Inputs */
+.card .form-control {
+    background: #333; /* Darker input fields */
+    color: white;
+    border: 1px solid #555;
+}
+
+.card .form-control::placeholder {
+    color: #bbb;
+}
+
+.card .form-control:focus {
+    background: #444;
+    border-color: #007bff;
+    color: white;
+}
+
+/* Table Styling */
+.table {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table thead {
+    background: #343a40;
+    color: white;
+}
+
+.table tbody tr:hover {
+    background: #f8f9fa;
+    transition: 0.3s;
+}
+
+/* Buttons */
+.btn {
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: black;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}

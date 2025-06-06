@@ -1,0 +1,33 @@
+/* Background Styling */
+.concert-list-container {
+    background-image: url("https://wallpapers.com/images/hd/4k-office-background-z1ym74nsi02yneks.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    min-height: 100vh;
+    padding: 40px 0;
+  }
+  
+  /* Card Styling */
+  .concert-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+  
+  .concert-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .concert-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  

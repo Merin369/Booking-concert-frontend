@@ -1,0 +1,72 @@
+/* ✅ Sticky & Solid Dark Blue Navbar */
+.animated-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #001f3f !important; /* Dark blue */
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎵 Navbar Brand Animation */
+.animated-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+.animated-brand:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* 🚀 Navbar Toggle */
+.animated-toggler {
+  border: none;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+.animated-toggler:hover {
+  transform: rotate(180deg);
+}
+
+/* 🔥 Navbar Links */
+.animated-link {
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.4s ease;
+  color: white !important;
+}
+.animated-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #00c3ff, #1e90ff, #32cd32);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.animated-link:hover::after {
+  transform: scaleX(1);
+}
+.animated-link:hover {
+  transform: translateY(-2px);
+  color: #f8f9fa !important;
+}
+
+/* ✨ Animated Logout Button */
+.animated-btn {
+  padding: 5px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  background: linear-gradient(45deg, #001f3f, #003366);
+  border: none;
+}
+.animated-btn:hover {
+  background: linear-gradient(45deg, #1e90ff, #2ed573);
+  transform: scale(1.1);
+}
