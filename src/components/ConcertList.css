@@ -1,33 +1,51 @@
-/* Background Styling */
+/* Concert List Container Background */
 .concert-list-container {
-    background-image: url("https://wallpapers.com/images/hd/4k-office-background-z1ym74nsi02yneks.jpg");
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center;
-    min-height: 100vh;
-    padding: 40px 0;
-  }
-  
-  /* Card Styling */
-  .concert-card {
-    transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: white;
-  }
-  
-  .concert-card img {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .concert-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card-body {
-    text-align: center;
-  }
-  
+  background-image: url("https://wallpapers.com/images/hd/4k-office-background-z1ym74nsi02yneks.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Individual Concert Card Styling */
+.concert-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* reduced shadow for subtle effect */
+  border: 1px solid #ddd; /* lighter and thinner border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.concert-card img {
+  width: 100%;
+  height: 180px;  /* fixed height for uniform cards */
+  object-fit: cover;  /* fill container without distortion */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+
+/* Card Body: Black background, White text */
+.card-body {
+  padding: 15px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000;  /* Black background */
+  color: #fff;             /* White text */
+}
+
+/* Hover effect on card */
+.concert-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}

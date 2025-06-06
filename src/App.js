@@ -14,26 +14,25 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div>
-       
+      <div className="main-content">  {/* Add this class */}
         <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/signup" element={<Signup />} />
-  <Route path="/login" element={<Login />} />
-  <Route path="/concerts" element={<ConcertList />} />
-  <Route path="/qr/:concertId/:ticketQuantity" element={<QRCodePage />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/concerts" element={<ConcertList />} />
+          <Route path="/qr/:concertId/:ticketQuantity" element={<QRCodePage />} />
 
-  {/* 🔒 Protect Payment Page & Booking Details */}
-  <Route element={<ProtectedRoute />}>
-    <Route path="/payment/:concertId" element={<PaymentPage />} />
-    <Route path="/dashboard" element={<Dashboard />} />
-    <Route path="/booking-details" element={<BookingDetails />} />
-  </Route>
-</Routes>
-
+          {/* 🔒 Protect Payment Page & Booking Details */}
+          <Route element={<ProtectedRoute />}>
+            <Route path="/payment/:concertId" element={<PaymentPage />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/booking-details" element={<BookingDetails />} />
+          </Route>
+        </Routes>
       </div>
     </Router>
   );
 }
+
 
 export default App;

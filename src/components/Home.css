@@ -1,62 +1,90 @@
-/* Full-page background */
+/* Full-page background with custom image */
 .home-container {
   position: relative;
-  height: 100vh;
-  background: url("https://th.bing.com/th/id/OIP.ueLDRcrpoqTL77E5KPVLvAHaE7?pid=ImgDet&w=184&h=122&c=7&dpr=1.3") no-repeat center center/cover;
-  overflow: hidden;
+  min-height: 100vh;
+  background: url("https://c4.wallpaperflare.com/wallpaper/257/116/964/light-strings-music-sound-wallpaper-preview.jpg")
+    no-repeat center center/cover;
+  overflow-y: auto;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Dark overlay */
+/* Background overlay */
 .background-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Darken background */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-/* Hero Section */
+/* Hero section */
 .hero-text {
   text-align: center;
+  color: #fff;
   padding: 20px;
+  max-width: 800px;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Special Note (Blinking) */
 .special-note {
   font-size: 1.2rem;
   font-weight: bold;
+  color: #ff9800;
   animation: blinkText 1s infinite alternate;
+  margin-top: 10px;
 }
 
-@keyframes blinkText {
-  0% { opacity: 1; }
-  100% { opacity: 0.5; }
+/* Section Headings */
+section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffcc00;
+  margin-bottom: 20px;
 }
 
-/* Bootstrap Card Styling */
+/* Paragraph text */
+section p {
+  font-size: 1rem;
+  color: #dddddd;
+  line-height: 1.6;
+}
+
+/* Card styles */
 .concert-card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background-color: #1f1f1f;
+  border: none;
 }
 
 .concert-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 10px 20px rgba(255, 165, 0, 0.3);
+  box-shadow: 0px 10px 20px rgba(255, 165, 0, 0.4);
 }
 
-/* Cart Icon */
+.card-title {
+  color: #ffcc00;
+}
+
+.card-text {
+  color: #e0e0e0;
+}
+
+/* Booking Info Cart Icon */
 .cart-icon {
   font-size: 2.5rem;
   color: #ff9800;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
   margin-top: 10px;
   animation: bounce 1.5s infinite ease-in-out;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  padding: 5px;
 }
 
 .cart-icon:hover {
@@ -64,7 +92,25 @@
   color: #ff5722;
 }
 
-/* Animations */
+/* Additional sections */
+footer {
+  padding: 20px 10px;
+  border-top: 1px solid #444;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Animation classes */
 .animate-fadeIn {
   animation: fadeIn 1.5s ease-in-out;
 }
@@ -77,22 +123,54 @@
   animation: zoomIn 1.2s ease-in-out;
 }
 
+/* Keyframes */
+@keyframes blinkText {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateX(-50px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes zoomIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
