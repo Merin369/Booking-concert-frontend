@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark animated-navbar">
       <div className="container">
         <Link className="navbar-brand animated-brand" to="/">
-          🎵 Concert Booking
+          Concert Booking
         </Link>
 
         {/* ✅ Animated Toggle Button */}
@@ -39,12 +39,12 @@ const Navbar = () => {
           <ul className="navbar-nav ms-auto text-center">
             <li className="nav-item">
               <Link className="nav-link animated-link" to="/">
-                🏠 Home
+                Home
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link animated-link" to="/concerts">
-                🎤 Concerts
+                 Concerts
               </Link>
             </li>
 
@@ -52,12 +52,12 @@ const Navbar = () => {
               <>
                 <li className="nav-item">
                   <Link className="nav-link animated-link" to="/signup">
-                    📝 Signup
+                    Signup
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link animated-link" to="/login">
-                    🔐 Login
+                     Login
                   </Link>
                 </li>
               </>
@@ -72,7 +72,7 @@ const Navbar = () => {
                 )}
                 <li className="nav-item">
                   <button className="btn logout-btn animated-btn" onClick={handleLogout}>
-                    🚪 Logout
+                     Logout
                   </button>
                 </li>
               </>

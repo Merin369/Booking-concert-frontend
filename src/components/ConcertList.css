@@ -1,13 +1,32 @@
-/* Concert List Container Background */
 .concert-list-container {
+  position: relative; /* for ::before positioning */
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Blurred Background Overlay */
+.concert-list-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
   background-image: url("https://wallpapers.com/images/hd/4k-office-background-z1ym74nsi02yneks.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100vh;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
+  filter: blur(8px);
+  opacity: 0.6;  /* adjust opacity for better contrast */
+  z-index: 1;
+  pointer-events: none; /* so clicks pass through */
 }
+
+/* Make sure content is above the blurred background */
+.concert-list-container > * {
+  position: relative;
+  z-index: 2;
+}
+
 
 /* Individual Concert Card Styling */
 .concert-card {

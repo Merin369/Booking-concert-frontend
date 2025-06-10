@@ -16,16 +16,10 @@
 /* 🎵 Navbar Brand Animation */
 .animated-brand {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: normal;  /* changed from bold to normal */
   transition: transform 0.3s ease-in-out;
   color: white;
   text-decoration: none;
-}
-.animated-brand:hover,
-.animated-brand:focus {
-  transform: scale(1.1);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-  outline: none;
 }
 
 /* 🚀 Navbar Toggle */
@@ -44,7 +38,7 @@
 /* 🔥 Navbar Links */
 .animated-link {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: normal; /* changed from bold to normal */
   position: relative;
   transition: all 0.4s ease;
   color: white;

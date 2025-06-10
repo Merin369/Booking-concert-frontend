@@ -1,28 +1,42 @@
 /* Background Styling */
 .signup-container {
-    width: 100%;
-    height: 100vh;
-    background: url("https://png.pngtree.com/thumb_back/fw800/background/20221021/pngtree-sign-up-network-create-account-page-photo-image_15082264.jpg") 
-      no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Signup Box Styling - Black Background with White Text */
-  .signup-box {
-    width: 400px;
-    padding: 30px;
-    background: rgba(0, 0, 0, 0.9); /* Black background */
-    color: white; /* White text */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Light shadow for contrast */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  position: relative; /* for overlay positioning */
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background image with blur overlay */
+.signup-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("https://www.shutterstock.com/shutterstock/photos/583127584/display_1500/stock-photo-businessman-hand-chooses-sign-up-wording-on-interface-screen-internet-technology-service-concept-583127584.jpg") no-repeat center center;
+  background-size: cover;
+  filter: blur(5px); /* Adjust blur here */
+  opacity: 0.8; /* Adjust opacity for visibility */
+  z-index: 0;
+}
+
+/* Your signup box should be positioned above the blur overlay */
+.signup-box {
+  position: relative;
+  z-index: 1;
+  width: 400px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
   
   /* Input Fields - White Text on Dark Background */
   .form-control {
